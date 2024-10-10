@@ -1,0 +1,38 @@
+[
+    {
+      "name": "John Doe",
+      "job_title": "Software Engineer",
+      "department": "IT",
+      "email": "johndoe@example.com",
+      "phone": "555-555-5555"
+    },
+    {
+      "name": "Jane Smith",
+      "job_title": "Product Manager",
+      "department": "Marketing",
+      "email": "janesmith@example.com",
+      "phone": "555-555-1234"
+    },
+    {
+      "name": "Emily Davis",
+      "job_title": "UX Designer",
+      "department": "Design",
+      "email": "emilydavis@example.com",
+      "phone": "555-555-6789"
+    },
+    {
+      "name": "Michael Brown",
+      "job_title": "Data Analyst",
+      "department": "Data",
+      "email": "michaelbrown@example.com",
+      "phone": "555-555-4321"
+    },
+    {
+      "name": "Sarah Wilson",
+      "job_title": "HR Specialist",
+      "department": "HR",
+      "email": "sarahwilson@example.com",
+      "phone": "555-555-9876"
+    }
+  ]
+  

@@ -3,74 +3,60 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Employee List - Sinks R Us</title>
+  <title>Employee List - Sinks R Us HR Management</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 h-screen p-4">
-  <div class="container mx-auto">
-    <h1 class="text-3xl font-bold text-red-600 mb-6">Employee List</h1>
+<body class="bg-gray-100">
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Employee List</h1>
+    <table class="min-w-full bg-white border">
+      <thead>
+        <tr>
+          <th class="py-2 px-4 border">Name</th>
+          <th class="py-2 px-4 border">Job Title</th>
+          <th class="py-2 px-4 border">Department</th>
+          <th class="py-2 px-4 border">Email</th>
+          <th class="py-2 px-4 border">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Example row for employee -->
+        <tr>
+          <td class="py-2 px-4 border">John Doe</td>
+          <td class="py-2 px-4 border">Software Engineer</td>
+          <td class="py-2 px-4 border">IT</td>
+          <td class="py-2 px-4 border">johndoe@example.com</td>
+          <td class="py-2 px-4 border">
+            <button onclick="openModal('johnDoe')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+          </td>
+        </tr>
+        <!-- Add 4 more fictional employees here -->
+      </tbody>
+    </table>
+  </div>
 
-    <!-- Responsive table container -->
-    <div class="overflow-x-auto">
-      <table class="min-w-full bg-white border border-gray-200">
-        <thead>
-          <tr class="bg-red-500 text-white">
-            <th class="py-2 px-4 border-b">Name</th>
-            <th class="py-2 px-4 border-b">Job Title</th>
-            <th class="py-2 px-4 border-b">Department</th>
-            <th class="py-2 px-4 border-b">Email</th>
-            <th class="py-2 px-4 border-b">Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="py-2 px-4 border-b">Ivan Petrov</td>
-            <td class="py-2 px-4 border-b">Software Engineer</td>
-            <td class="py-2 px-4 border-b">IT</td>
-            <td class="py-2 px-4 border-b">ivan.petrov@sinksrus.com</td>
-            <td class="py-2 px-4 border-b">
-              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">View</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Pedro Los Baños</td>
-            <td class="py-2 px-4 border-b">Marketing Manager</td>
-            <td class="py-2 px-4 border-b">Marketing</td>
-            <td class="py-2 px-4 border-b">pedro_los_banos@sinksrus.com</td>
-            <td class="py-2 px-4 border-b">
-              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">View</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Ana Gómez</td>
-            <td class="py-2 px-4 border-b">HR Specialist</td>
-            <td class="py-2 px-4 border-b">HR</td>
-            <td class="py-2 px-4 border-b">ana.gomez@sinksrus.com</td>
-            <td class="py-2 px-4 border-b">
-              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">View</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">John Wu</td>
-            <td class="py-2 px-4 border-b">Sales Associate</td>
-            <td class="py-2 px-4 border-b">Sales</td>
-            <td class="py-2 px-4 border-b">john.wu@sinksrus.com</td>
-            <td class="py-2 px-4 border-b">
-              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">View</button>
-            </td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Emma Wilson</td>
-            <td class="py-2 px-4 border-b">CEO</td>
-            <td class="py-2 px-4 border-b">Admin</td>
-            <td class="py-2 px-4 border-b">emma@sinksrus.com</td>
-            <td class="py-2 px-4 border-b">
-              <button class="bg-red-500 text-white px-3 py-1 rounded hover:bg-red-600">View</button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+  <!-- Modal -->
+  <div id="employeeModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
+    <div class="bg-white p-6 rounded-lg">
+      <h2 class="text-2xl font-bold mb-4">Employee Info</h2>
+      <p><strong>Name:</strong> John Doe</p>
+      <p><strong>Job Title:</strong> Software Engineer</p>
+      <p><strong>Department:</strong> IT</p>
+      <p><strong>Email:</strong> johndoe@example.com</p>
+      <p><strong>Phone:</strong> 555-555-5555</p>
+      <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-1 rounded">Close</button>
     </div>
   </div>
+
+  <script>
+    function openModal(employeeId) {
+      document.getElementById('employeeModal').classList.remove('hidden');
+      // Populate modal with employee data based on employeeId (you can use JS or AJAX here)
+    }
+
+    function closeModal() {
+      document.getElementById('employeeModal').classList.add('hidden');
+    }
+  </script>
 </body>
 </html>

@@ -7,75 +7,79 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
-  <div class="container mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-4">Employee List</h1>
-    <table class="min-w-full bg-white border">
-      <thead>
-        <tr>
-          <th class="py-2 px-4 border">Name</th>
-          <th class="py-2 px-4 border">Job Title</th>
-          <th class="py-2 px-4 border">Department</th>
-          <th class="py-2 px-4 border">Email</th>
-          <th class="py-2 px-4 border">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-
-        <tr>
-          <td class="py-2 px-4 border">Ivan Petrov</td>
-          <td class="py-2 px-4 border">Software Engineer</td>
-          <td class="py-2 px-4 border">IT</td>
-          <td class="py-2 px-4 border">ivan.petrov@sinksrus.com</td>
-          <td class="py-2 px-4 border">
-            <button onclick="openModal('ivanPetrov')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-4 border">Pedro Los Baños</td>
-          <td class="py-2 px-4 border">Marketing Manager</td>
-          <td class="py-2 px-4 border">Marketing</td>
-          <td class="py-2 px-4 border">pedro_los_banos@sinksrus.com</td>
-          <td class="py-2 px-4 border">
-            <button onclick="openModal('pedroLosBanos')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-4 border">Ana Gómez</td>
-          <td class="py-2 px-4 border">HR Specialist</td>
-          <td class="py-2 px-4 border">HR</td>
-          <td class="py-2 px-4 border">ana.gomez@sinksrus.com</td>
-          <td class="py-2 px-4 border">
-            <button onclick="openModal('anaGomez')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-4 border">John Wu</td>
-          <td class="py-2 px-4 border">Sales Associate</td>
-          <td class="py-2 px-4 border">Sales</td>
-          <td class="py-2 px-4 border">john.wu@sinksrus.com</td>
-          <td class="py-2 px-4 border">
-            <button onclick="openModal('johnWu')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
-          </td>
-        </tr>
-
-        <tr>
-          <td class="py-2 px-4 border">Emma Wilson</td>
-          <td class="py-2 px-4 border">CEO</td>
-          <td class="py-2 px-4 border">Admin</td>
-          <td class="py-2 px-4 border">emma@sinksrus.com</td>
-          <td class="py-2 px-4 border">
-            <button onclick="openModal('emmaWilson')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
-          </td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="container mx-auto p-4 sm:p-6">
+    <h1 class="text-2xl sm:text-3xl font-bold mb-4">Employee List</h1>
+    
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border">
+        <thead>
+          <tr>
+            <th class="py-2 px-4 border">Name</th>
+            <th class="py-2 px-4 border">Job Title</th>
+            <th class="py-2 px-4 border">Department</th>
+            <th class="py-2 px-4 border">Email</th>
+            <th class="py-2 px-4 border">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Employee 1: Ivan Petrov -->
+          <tr>
+            <td class="py-2 px-4 border">Ivan Petrov</td>
+            <td class="py-2 px-4 border">Software Engineer</td>
+            <td class="py-2 px-4 border">IT</td>
+            <td class="py-2 px-4 border">ivan.petrov@sinksrus.com</td>
+            <td class="py-2 px-4 border">
+              <button onclick="openModal('ivanPetrov')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+            </td>
+          </tr>
+          <!-- Employee 2: Pedro Los Baños -->
+          <tr>
+            <td class="py-2 px-4 border">Pedro Los Baños</td>
+            <td class="py-2 px-4 border">Marketing Manager</td>
+            <td class="py-2 px-4 border">Marketing</td>
+            <td class="py-2 px-4 border">pedro_los_banos@sinksrus.com</td>
+            <td class="py-2 px-4 border">
+              <button onclick="openModal('pedroLosBanos')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+            </td>
+          </tr>
+          <!-- Employee 3: Ana Gómez -->
+          <tr>
+            <td class="py-2 px-4 border">Ana Gómez</td>
+            <td class="py-2 px-4 border">HR Specialist</td>
+            <td class="py-2 px-4 border">HR</td>
+            <td class="py-2 px-4 border">ana.gomez@sinksrus.com</td>
+            <td class="py-2 px-4 border">
+              <button onclick="openModal('anaGomez')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+            </td>
+          </tr>
+          <!-- Employee 4: John Wu -->
+          <tr>
+            <td class="py-2 px-4 border">John Wu</td>
+            <td class="py-2 px-4 border">Sales Associate</td>
+            <td class="py-2 px-4 border">Sales</td>
+            <td class="py-2 px-4 border">john.wu@sinksrus.com</td>
+            <td class="py-2 px-4 border">
+              <button onclick="openModal('johnWu')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+            </td>
+          </tr>
+          <!-- Employee 5: Emma Wilson -->
+          <tr>
+            <td class="py-2 px-4 border">Emma Wilson</td>
+            <td class="py-2 px-4 border">CEO</td>
+            <td class="py-2 px-4 border">Admin</td>
+            <td class="py-2 px-4 border">emma@sinksrus.com</td>
+            <td class="py-2 px-4 border">
+              <button onclick="openModal('emmaWilson')" class="bg-blue-500 text-white px-4 py-1 rounded">View Info</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 
-  <div id="employeeModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-    <div class="bg-white p-6 rounded-lg">
+  <!-- Modal -->
+  <div id="employeeModal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center px-4 sm:px-0">
+    <div class="bg-white p-6 rounded-lg w-full max-w-lg">
       <h2 class="text-2xl font-bold mb-4">Employee Info</h2>
       <div id="modalContent"></div>
       <button onclick="closeModal()" class="mt-4 bg-red-500 text-white px-4 py-1 rounded">Close</button>
